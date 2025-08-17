@@ -43,7 +43,7 @@ fun ParamsScreen(
                 navigationIcon = {
                     BackButton { onBackClick() }
                 },
-                title = { Text(text = "Params") },
+                title = { Text(text = "机型参数") },
             )
         }
     ) { paddingValues ->
@@ -55,7 +55,7 @@ fun ParamsScreen(
         ) {
 
             ParamsItem(
-                title = "Version Name",
+                title = "酷安版本",
                 data = prefs.versionName.ifEmpty { null }
             ) {
                 viewModel.setVersionName(it)
@@ -65,14 +65,14 @@ fun ParamsScreen(
             }
 
             ParamsItem(
-                title = "Api Version",
+                title = "Api版本",
                 data = prefs.apiVersion.ifEmpty { null }
             ) {
                 viewModel.setApiVersion(it)
             }
 
             ParamsItem(
-                title = "Version Code",
+                title = "版本号",
                 data = prefs.versionCode.ifEmpty { null }
             ) {
                 viewModel.setVersionCode(it)
@@ -82,7 +82,7 @@ fun ParamsScreen(
             }
 
             ParamsItem(
-                title = "Manufacturer",
+                title = "制造商",
                 data = prefs.manufacturer.ifEmpty { null }
             ) {
                 viewModel.setManufacturer(it)
@@ -92,7 +92,7 @@ fun ParamsScreen(
             }
 
             ParamsItem(
-                title = "Brand",
+                title = "品牌",
                 data = prefs.brand.ifEmpty { null }
             ) {
                 viewModel.setBrand(it)
@@ -105,7 +105,7 @@ fun ParamsScreen(
             }
 
             ParamsItem(
-                title = "Model",
+                title = "机型",
                 data = prefs.model.ifEmpty { null }
             ) {
                 viewModel.setModel(it)
@@ -118,7 +118,7 @@ fun ParamsScreen(
             }
 
             ParamsItem(
-                title = "BuildNumber",
+                title = "构建版本号",
                 data = prefs.buildNumber.ifEmpty { null }
             ) {
                 viewModel.setBuildNumber(it)
@@ -138,7 +138,7 @@ fun ParamsScreen(
             }
 
             ParamsItem(
-                title = "Android Version",
+                title = "安卓版本",
                 data = prefs.androidVersion.ifEmpty { null }
             ) {
                 viewModel.setAndroidVersion(it)
@@ -158,7 +158,7 @@ fun ParamsScreen(
             )
 
             BasicListItem(
-                headlineText = "Regenerate Params"
+                headlineText = "重新生成随机设备信息"
             ) {
                 viewModel.regenerateParams()
             }
